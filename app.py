@@ -1,4 +1,4 @@
-# (c) 2024 Full Name
+# (c) 2024 Purcon Quisado
 # This program is a terminal-based weather viewer.
 
 import os
@@ -76,7 +76,7 @@ def set_weather_api_key():
     key = input("Enter your weather API key: ")
 
 def load_weather_data():
-    if not weather_api_key:
+    if not key:
         return set_weather_api_key()
     
     URL = f"{BASE_API}?lat={latitude}&lon={longitude}&units=metric&appid={key}"
@@ -156,4 +156,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-    
